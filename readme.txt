@@ -1,0 +1,2 @@
+some card properties-
+---------------------
