@@ -1,18 +1,8 @@
-<!------------------------------DOCTYPE HTML-----------------------------  
-  ADDED---
-  --------
-  
-  underline
-  
-  ---------
-  ToADD----
-  ---------
-  card element/ division 
-  
-  ----------------------------------------------------------------------------------------->
+
 <html lang="en">
   
-  <meta charset=UTF-8">
+  <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=98%">  
   <title> Stem </title>
     
@@ -53,20 +43,19 @@
     
     </style></meta></meta>
 
-  <head>
-  <center>
-    <div>
+  </head>
+  <body>
+    <center>
+      <div>
      
       Poor-toll below
     </div>
     <a href="https://www.thuum.org/learn/" target="_blank">Forbbiden Knowledge</a>
-  </head>
   
-  <body>
   <div>
     <h1> Old Poortoll </h1>
     <p>Informative material: 
-      <a href=https://youtu.be/vTuLRiGqnB8?si=4a0At5yPxXhN64X1` target="_blank">Video</a> </p>
+      <a href="https://youtu.be/vTuLRiGqnB8?si=4a0At5yPxXhN64X1` target="_blank">Video</a> </p>
     </div>
     <div>
       <p>my top 3 favorite things in life are:</p>
@@ -104,7 +93,30 @@
       
       </center>
     </div>
-    
+    <button id="mine-_-"<img src="IoT.jpeg" alt="clickMe"><img></button>
+  <pre id="output"></pre>
+
+  <script>
+    document.getElementById('mine-_-').addEventListener('click', function() {
+      fetch('/mine', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          data: "Hello-World",
+          difficulty: 5
+        })
+      })
+      .then(response => response.json())
+      .then(result => {
+        document.getElementById('output').textContent = JSON.stringify(result, null, 2);
+      })
+      .catch(error => {
+        document.getElementById('output').textContent = 'Error: ' + error;
+      });
+    });
+  </script>
   </body>
   <center>
   <footer> <address><p><a href="www.youtube" target="_blank"> link </a></p></address>
